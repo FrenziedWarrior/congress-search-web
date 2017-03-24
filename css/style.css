@@ -1,0 +1,231 @@
+body {
+    overflow-x: hidden;
+/*    font-size: 10px;*/
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+      display: none !important;
+}
+
+.header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 2em;
+    font-size: 1.3em;
+    background-color: white;
+    z-index: 1;
+    margin: 0 auto;
+}
+
+#body-wrapper {
+    padding-left: 200px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#body-wrapper.toggled {
+    padding-left: 0;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 200px;
+    height: 100%;
+/*    margin-top: 50px;*/
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #333;
+    overflow-x: hidden;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#body-wrapper.toggled #sidebar-wrapper {
+    width: 0;
+}
+
+#page-wrapper {
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+    background-color: #f5f5f5;
+/*    padding: 15px;*/
+/*    overflow-y: scroll;*/
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+}
+
+
+.sidebar-nav {
+    position: absolute;
+    top: 1em;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+/*    overflow-x: hidden;*/
+}
+
+.sidebar-nav li {
+    text-indent: 10px;
+/*    font-weight: bold;*/
+    line-height: 4em;
+}
+
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #999999;
+}
+
+.sidebar-nav li a.navtabActive {
+    color: #ffffff;
+}
+
+
+
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+
+
+.page-header { 
+    margin-top: 0;
+}
+
+
+
+.inline { display: inline;  }
+
+
+img {    
+    max-width: 100%;   
+}
+
+
+img.party-logo {    
+    width: 25px;    
+}
+
+
+img.ch-logo { 
+    width: 25px;
+}
+
+
+.label-chamber {
+    display: inline;
+    margin-left: 5px;
+}
+
+
+label[for=inputField1] { margin-left: 1%;}
+label[for=inputField2] { margin-left: 5%;}
+
+
+select#inputField1 {
+    float: right;
+    width: auto;
+    margin-right: 1%;
+}
+
+
+input#inputField2 {
+    float: right;
+    width: auto;
+    margin-right: 5%;
+}
+
+
+
+img.social {
+    width: 15%;
+    padding-right: 2%;
+}
+
+i.iconDisabled {
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000;
+}
+
+i.iconEnabled {
+    color: yellow;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000000;
+}
+
+.nav-label {
+    margin-left: 10px;
+}
+
+.leg-pic-wrapper {
+     text-align:center; 
+     width: 50%;
+}
+
+.fav-leg-thumb {
+    width: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+    #sidebar-wrapper {
+        width: 50px;
+    }
+    
+    #body-wrapper {
+        padding-left: 50px;
+    }
+    
+    .nav-label {
+        display: none;
+    }
+    
+    .leg-dp {
+        min-width: 10%;
+    }
+    
+    .hide-xs {
+        display: none;
+    }
+    
+    .block-xs {
+        display:block;
+        width: 100%;
+    }
+    
+    
+    img.party-logo {    
+        min-width: 25px;    
+    }
+
+
+    img.ch-logo { 
+        min-width: 25px;
+    }
+    
+    td .wrap-cols {
+        white-space: pre-wrap;
+    }
+    
+    select#inputField1 {
+        float: right;
+        width: 125px;
+        margin-right: 1%;
+    }
+}
